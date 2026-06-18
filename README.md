@@ -1,18 +1,16 @@
 # Backup Automation Tool
 
-Automated backup with encryption, compression, and S3 upload.
+Automated backup with AES-256-GCM encryption, compression, and cloud upload.
 
 ## Features
 - Incremental backups with deduplication
-- AES-256-GCM encryption
 - Multi-cloud: S3, GCS, Azure Blob
-- Scheduled via cron or systemd timer
+- AES-256-GCM encryption at rest
+- Scheduled via cron or systemd
 
 ## CLI
 ```bash
 backup run --source /data --dest s3://bucket/ --encrypt --incremental
-backup verify --job-id latest --sample 10%
 ```
 
-## License
-MIT
+## License: Apache 2.0
